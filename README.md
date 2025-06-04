@@ -6,7 +6,7 @@ Flutter Developer Coding Challenge: User Manager App
 🧷 Before You Start
 
 1. Clone the Repository
-   git clone https://github.com/Dealer-Automation-Technologies/mobile-test-interview.git
+  https://github.com/Dealer-Automation-Technologies/mobile-final-interview-solution.git
 
 2. Create a New Branch Using Your Name
    Example:
