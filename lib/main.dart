@@ -56,21 +56,8 @@ class _UserPageState extends State<UserPage> {
       body: Column(
         children: [
           Expanded(
-            child: ListView.builder(
-              itemCount: provider.users.length,
-              itemBuilder: (context, index) {
-                final user = provider.users[index];
-                return ListTile(
-                  title: Text(user.name),
-                  subtitle: Text(user.email),
-                  trailing: IconButton(
-                    icon: const Icon(Icons.delete),
-                    onPressed: () => provider.deleteUser(index),
-                  ),
-                );
-              },
-            ),
-          ),
+            //TODO Show List of users in a ListView
+            child: SizedBox()),
           Padding(
             padding: const EdgeInsets.all(8),
             child: Column(
@@ -86,14 +73,7 @@ class _UserPageState extends State<UserPage> {
                 ElevatedButton(
                   child: const Text("Add User"),
                   onPressed: () {
-                    final newUser = User(
-                      id: DateTime.now().millisecondsSinceEpoch,
-                      name: nameCtrl.text,
-                      email: emailCtrl.text,
-                    );
-                    provider.addUser(newUser);
-                    nameCtrl.clear();
-                    emailCtrl.clear();
+                      //TODO: Add user to the list using  the user information from the text fields
                   },
                 ),
               ],

@@ -10,15 +10,10 @@ class UserProvider with ChangeNotifier {
   List<User> get users => _users;
 
   Future<void> fetchUsers() async {
-    final res = await http.get(
-      Uri.parse('https://jsonplaceholder.typicode.com/users'),
-      headers: {'Content-Type': 'application/json'},
-    );
-    if (res.statusCode == 200) {
-      _users = User.fromJsonList(jsonDecode(res.body));
-      await saveToPrefs();
-      notifyListeners();
-    }
+    //Url for fetching users
+    //https://jsonplaceholder.typicode.com/users
+
+    //TODO: fetch users from the URL and update _users list using http package
   }
 
   Future<void> loadFromPrefs() async {
@@ -32,9 +27,7 @@ class UserProvider with ChangeNotifier {
   }
 
   Future<void> saveToPrefs() async {
-    final prefs = await SharedPreferences.getInstance();
-    final jsonString = jsonEncode(_users.map((u) => u.toJson()).toList());
-    await prefs.setString('users', jsonString);
+    //TODO: save _users list to SharedPreferences
   }
 
   void addUser(User user) {

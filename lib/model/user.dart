@@ -2,6 +2,7 @@ class User {
   final int id;
   final String name;
   final String email;
+  //TODO : Add more fields if needed to show in the UI
 
   User({required this.id, required this.name, required this.email});
 
